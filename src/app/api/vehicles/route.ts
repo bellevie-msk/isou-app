@@ -10,7 +10,7 @@ const dataFilePath = path.join(process.cwd(), 'src', 'data', 'vehicles.json');
 // 車両一覧を取得 (Public)
 export async function GET() {
   try {
-    const fileContents = await fs.readFile(dataFilePath, 'utf8';
+    const fileContents = await fs.readFile(dataFilePath, 'utf8');
     const vehicles = JSON.parse(fileContents);
     return NextResponse.json(vehicles);
   } catch (error) {
