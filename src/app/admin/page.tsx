@@ -1,9 +1,7 @@
 'use client';
+'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-
-// vehicles.jsonは使用せず、APIから取得するように変更
-// import vehicles from '@/data/vehicles.json';
 
 interface Vehicle {
   id: number;
@@ -12,7 +10,6 @@ interface Vehicle {
   type: 'ケアライフ' | 'ベルビー';
   unitPrice: number; // Add unitPrice property
 }
-
 
 interface MileageRecord {
   vehicleId: number;
@@ -53,6 +50,28 @@ export default function AdminPage() {
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  // --- New: Fetch authentication status on load ---
+  useEffect(() => {
+    const checkAuthStatus = async () => {
+      try {
+        const response = await fetch('/api/auth/status');
+        if (response.ok) {
+          const data = await response.json();
+          setIsAuthenticated(data.isAuthenticated);
+        } else {
+          setIsAuthenticated(false);
+        }
+      } catch (err) {
+        console.error('Error checking auth status:', err);
+        setIsAuthenticated(false);
+      } finally {
+        setLoading(false);
+      }
+    };
+    checkAuthStatus();
+  }, []);
+  // --- End New ---
+
   const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -75,6 +94,23 @@ export default function AdminPage() {
       alert('認証リクエスト中にエラーが発生しました。');
     }
   };
+
+  // --- New: Logout function ---
+  const handleLogout = async () => {
+    try {
+      const response = await fetch('/api/auth/logout');
+      if (response.ok) {
+        setIsAuthenticated(false);
+        alert('ログアウトしました。');
+      } else {
+        alert('ログアウトに失敗しました。');
+      }
+    } catch (error) {
+      console.error('Logout request failed:', error);
+      alert('ログアウト中にエラーが発生しました。');
+    }
+  };
+  // --- End New ---
 
   // Helper to format numbers with commas
   const formatNumberWithCommas = (num: number | string) => {
@@ -139,7 +175,7 @@ export default function AdminPage() {
     return () => {
       isMounted = false; // クリーンアップ時にマウント状態をfalseに設定
     };
-  }, []);
+  }, []); // Removed dependencies to avoid re-fetching on every render, will rely on explicit calls
 
   // フィルタリングロジック
   useEffect(() => {
@@ -382,6 +418,17 @@ export default function AdminPage() {
 
   return (
     <main className="container mx-auto p-4">
+      {/* --- New: Logout Button --- */}
+      <div className="flex justify-end mb-4">
+        <button
+          onClick={handleLogout}
+          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+        >
+          ログアウト
+        </button>
+      </div>
+      {/* --- End New --- */}
+
       {/* 集計レポートセクション */}
       <h2 className="text-2xl font-bold mb-4 mt-8 text-center">走行距離集計レポート</h2>
       <div className="mb-4 flex justify-center items-center gap-4">
@@ -399,7 +446,7 @@ export default function AdminPage() {
         <label htmlFor="reportMonth">月:</label>
         <select
           id="reportMonth"
-          className="p-2 border border-gray-300 rounded text-black"
+          className="p-2 border border-gray-300 rounded w-full text-black"
           value={reportMonth}
           onChange={(e) => setReportMonth(e.target.value)}
         >
@@ -468,6 +515,7 @@ export default function AdminPage() {
                     <td className="py-2 px-4 border-b">{record.date?.substring(5) || ''}</td>
                     <td className="py-2 px-4 border-b">{record.dayOfWeek || ''}</td>
                     <td className="py-2 px-4 border-b">{record.usage || ''}</td>
+                    <td className="py-2 px-4 border-b">{record.type || ''}</td>
                     <td className="py-2 px-4 border-b">{record.drivenDistance || ''}</td>
                     <td className="py-2 px-4 border-b">{unitPrice}</td>
                     <td className="py-2 px-4 border-b">{amount.toLocaleString()}</td>
@@ -492,6 +540,7 @@ export default function AdminPage() {
                 <th className="py-2 px-4 border-b">月日</th>
                 <th className="py-2 px-4 border-b">曜日</th>
                 <th className="py-2 px-4 border-b">用途</th>
+                <th className="py-2 px-4 border-b">種類</th>
                 <th className="py-2 px-4 border-b">距離(km)</th>
                 <th className="py-2 px-4 border-b">単価(円/km)</th>
                 <th className="py-2 px-4 border-b">料金(円)</th>
@@ -509,6 +558,7 @@ export default function AdminPage() {
                     <td className="py-2 px-4 border-b">{record.date?.substring(5) || ''}</td>
                     <td className="py-2 px-4 border-b">{record.dayOfWeek || ''}</td>
                     <td className="py-2 px-4 border-b">{record.usage || ''}</td>
+                    <td className="py-2 px-4 border-b">{record.type || ''}</td>
                     <td className="py-2 px-4 border-b">{record.drivenDistance || ''}</td>
                     <td className="py-2 px-4 border-b">{unitPrice}</td>
                     <td className="py-2 px-4 border-b">{amount.toLocaleString()}</td>
