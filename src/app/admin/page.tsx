@@ -731,9 +731,12 @@ export default function AdminPage() {
                   name="type"
                   className="p-2 border border-gray-700 rounded w-full text-black"
                   value={currentRecord.type}
-                  onChange={(e) => setCurrentRecord({ ...currentRecord, type: e.target.value as 'ケア' | 'ベル' })}
+                  onChange={(e) => setCurrentRecord({ ...currentRecord, type: e.target.value as 'ケアライフ' | 'ベルビー' })}
                   required
-                />
+                >
+                  <option value="ベルビー">ベルビー</option>
+                  <option value="ケアライフ">ケアライフ</option>
+                </select>
               </div>
               <div>
                 <label htmlFor="editStartMeter" className="text-lg">乗車時メーター:</label>
