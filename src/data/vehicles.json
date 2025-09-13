@@ -1,0 +1,356 @@
+[
+  {
+    "id": 55,
+    "name": "ノア",
+    "color": "blue",
+    "unitPrice": 50
+  },
+  {
+    "id": 62,
+    "name": "ラクティス",
+    "color": "blue",
+    "unitPrice": 30
+  },
+  {
+    "id": 73,
+    "name": "バネット",
+    "color": "green",
+    "type": "ケアライフ",
+    "unitPrice": 30
+  },
+  {
+    "id": 4,
+    "name": "車両 4",
+    "color": "blue"
+  },
+  {
+    "id": 5,
+    "name": "車両 5",
+    "color": "blue"
+  },
+  {
+    "id": 6,
+    "name": "車両 6",
+    "color": "blue"
+  },
+  {
+    "id": 7,
+    "name": "車両 7",
+    "color": "blue"
+  },
+  {
+    "id": 8,
+    "name": "車両 8",
+    "color": "blue"
+  },
+  {
+    "id": 9,
+    "name": "車両 9",
+    "color": "blue"
+  },
+  {
+    "id": 10,
+    "name": "車両 10",
+    "color": "blue"
+  },
+  {
+    "id": 11,
+    "name": "車両 11",
+    "color": "blue"
+  },
+  {
+    "id": 12,
+    "name": "車両 12",
+    "color": "blue"
+  },
+  {
+    "id": 13,
+    "name": "車両 13",
+    "color": "blue"
+  },
+  {
+    "id": 14,
+    "name": "車両 14",
+    "color": "blue"
+  },
+  {
+    "id": 15,
+    "name": "車両 15",
+    "color": "blue"
+  },
+  {
+    "id": 16,
+    "name": "車両 16",
+    "color": "blue"
+  },
+  {
+    "id": 17,
+    "name": "車両 17",
+    "color": "blue"
+  },
+  {
+    "id": 18,
+    "name": "車両 18",
+    "color": "blue"
+  },
+  {
+    "id": 19,
+    "name": "車両 19",
+    "color": "blue"
+  },
+  {
+    "id": 20,
+    "name": "車両 20",
+    "color": "blue"
+  },
+  {
+    "id": 21,
+    "name": "車両 21",
+    "color": "blue"
+  },
+  {
+    "id": 22,
+    "name": "車両 22",
+    "color": "blue"
+  },
+  {
+    "id": 23,
+    "name": "車両 23",
+    "color": "blue"
+  },
+  {
+    "id": 24,
+    "name": "車両 24",
+    "color": "blue"
+  },
+  {
+    "id": 25,
+    "name": "車両 25",
+    "color": "blue"
+  },
+  {
+    "id": 26,
+    "name": "車両 26",
+    "color": "blue"
+  },
+  {
+    "id": 27,
+    "name": "車両 27",
+    "color": "blue"
+  },
+  {
+    "id": 28,
+    "name": "車両 28",
+    "color": "blue"
+  },
+  {
+    "id": 29,
+    "name": "車両 29",
+    "color": "blue"
+  },
+  {
+    "id": 30,
+    "name": "車両 30",
+    "color": "blue"
+  },
+  {
+    "id": 31,
+    "name": "車両 31",
+    "color": "blue"
+  },
+  {
+    "id": 32,
+    "name": "車両 32",
+    "color": "blue"
+  },
+  {
+    "id": 33,
+    "name": "車両 33",
+    "color": "blue"
+  },
+  {
+    "id": 34,
+    "name": "車両 34",
+    "color": "blue"
+  },
+  {
+    "id": 35,
+    "name": "車両 35",
+    "color": "blue"
+  },
+  {
+    "id": 36,
+    "name": "車両 36",
+    "color": "blue"
+  },
+  {
+    "id": 37,
+    "name": "車両 37",
+    "color": "blue"
+  },
+  {
+    "id": 38,
+    "name": "車両 38",
+    "color": "blue"
+  },
+  {
+    "id": 39,
+    "name": "車両 39",
+    "color": "blue"
+  },
+  {
+    "id": 40,
+    "name": "車両 40",
+    "color": "blue"
+  },
+  {
+    "id": 41,
+    "name": "車両 41",
+    "color": "blue"
+  },
+  {
+    "id": 42,
+    "name": "車両 42",
+    "color": "blue"
+  },
+  {
+    "id": 43,
+    "name": "車両 43",
+    "color": "blue"
+  },
+  {
+    "id": 44,
+    "name": "車両 44",
+    "color": "blue"
+  },
+  {
+    "id": 45,
+    "name": "車両 45",
+    "color": "blue"
+  },
+  {
+    "id": 46,
+    "name": "車両 46",
+    "color": "blue"
+  },
+  {
+    "id": 47,
+    "name": "車両 47",
+    "color": "blue"
+  },
+  {
+    "id": 48,
+    "name": "車両 48",
+    "color": "blue"
+  },
+  {
+    "id": 49,
+    "name": "車両 49",
+    "color": "blue"
+  },
+  {
+    "id": 50,
+    "name": "車両 50",
+    "color": "blue"
+  },
+  {
+    "id": 51,
+    "name": "車両 51",
+    "color": "blue"
+  },
+  {
+    "id": 52,
+    "name": "車両 52",
+    "color": "blue"
+  },
+  {
+    "id": 53,
+    "name": "車両 53",
+    "color": "blue"
+  },
+  {
+    "id": 54,
+    "name": "車両 54",
+    "color": "blue"
+  },
+  {
+    "id": 55,
+    "name": "車両 55",
+    "color": "blue"
+  },
+  {
+    "id": 56,
+    "name": "車両 56",
+    "color": "blue"
+  },
+  {
+    "id": 57,
+    "name": "車両 57",
+    "color": "blue"
+  },
+  {
+    "id": 58,
+    "name": "車両 58",
+    "color": "blue"
+  },
+  {
+    "id": 59,
+    "name": "車両 59",
+    "color": "blue"
+  },
+  {
+    "id": 60,
+    "name": "車両 60",
+    "color": "blue"
+  },
+  {
+    "id": 61,
+    "name": "車両 61",
+    "color": "blue"
+  },
+  {
+    "id": 62,
+    "name": "車両 62",
+    "color": "blue"
+  },
+  {
+    "id": 63,
+    "name": "車両 63",
+    "color": "blue"
+  },
+  {
+    "id": 64,
+    "name": "車両 64",
+    "color": "blue"
+  },
+  {
+    "id": 65,
+    "name": "車両 65",
+    "color": "blue"
+  },
+  {
+    "id": 66,
+    "name": "車両 66",
+    "color": "blue"
+  },
+  {
+    "id": 67,
+    "name": "車両 67",
+    "color": "blue"
+  },
+  {
+    "id": 68,
+    "name": "車両 68",
+    "color": "blue"
+  },
+  {
+    "id": 69,
+    "name": "車両 69",
+    "color": "blue"
+  },
+  {
+    "id": 70,
+    "name": "車両 70",
+    "color": "blue"
+  }
+]
